@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://polar91275C762EF847969B236C51745DEF81/./style/visual.less"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"visual.css","sourcesContent":["p {\n  font-size: 20px;\n  font-weight: bold;\n}\np em {\n  background: yellow;\n  padding: 5px;\n}\n"],"sourceRoot":""}

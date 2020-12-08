@@ -1,0 +1,196 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "区域",
+            "name": "city",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "值",
+            "name": "measure",
+            "kind": "Measure"
+        }
+    ],
+    "drilldown": {
+        "roles": [
+            "city"
+        ]
+    },
+    "objects": {
+        "myproperties": {
+            "displayName": "自定义属性",
+            "properties": {
+                "theme": {
+                    "displayName": "主题颜色",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Default",
+                                "value": "default"
+                            },
+                            {
+                                "displayName": "Infographic",
+                                "value": "infographic"
+                            },
+                            {
+                                "displayName": "Chalk",
+                                "value": "chalk"
+                            },
+                            {
+                                "displayName": "Vintage",
+                                "value": "vintage"
+                            },
+                            {
+                                "displayName": "Dark",
+                                "value": "dark"
+                            },
+                            {
+                                "displayName": "Walden",
+                                "value": "walden"
+                            },
+                            {
+                                "displayName": "Roma",
+                                "value": "roma"
+                            },
+                            {
+                                "displayName": "Shine",
+                                "value": "shine"
+                            }
+                        ]
+                    }
+                },
+                "showtoolbox": {
+                    "displayName": "显示工具条",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showlegend": {
+                    "displayName": "显示图例",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "showlable": {
+                    "displayName": "显示标签",
+                    "type": {
+                        "bool": true
+                    }
+                },
+                "lableposition": {
+                    "displayName": "标签位置",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Center",
+                                "value": "center"
+                            },
+                            {
+                                "displayName": "Top",
+                                "value": "top"
+                            },
+                            {
+                                "displayName": "Left",
+                                "value": "left"
+                            },
+                            {
+                                "displayName": "Right",
+                                "value": "right "
+                            },
+                            {
+                                "displayName": "Bottom",
+                                "value": "bottom"
+                            },
+                            {
+                                "displayName": "Inside",
+                                "value": "inside"
+                            },
+                            {
+                                "displayName": "InsideLeft",
+                                "value": "insideLeft"
+                            },
+                            {
+                                "displayName": "InsideRight",
+                                "value": "insideRight"
+                            },
+                            {
+                                "displayName": "InsideTop",
+                                "value": "insideTop"
+                            },
+                            {
+                                "displayName": "InsideBottom",
+                                "value": "insideBottom"
+                            },
+                            {
+                                "displayName": "InsideTopLeft",
+                                "value": "insideTopLeft"
+                            },
+                            {
+                                "displayName": "InsideBottomLeft",
+                                "value": "insideBottomLeft"
+                            },
+                            {
+                                "displayName": "InsideTopRight",
+                                "value": "insideTopRight"
+                            },
+                            {
+                                "displayName": "InsideBottomRight",
+                                "value": "insideBottomRight"
+                            }
+                        ]
+                    }
+                },
+                "renderer": {
+                    "displayName": "渲染方式",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Canvas",
+                                "value": "canvas"
+                            },
+                            {
+                                "displayName": "SVG",
+                                "value": "svg"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "conditions": [
+                {
+                    "city": {
+                        "max": 2
+                    }
+                },
+                {
+                    "measure": {
+                        "max": 1
+                    }
+                }
+            ],
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "city"
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "for": {
+                                "in": "measure"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "sorting": {
+        "default": {}
+    }
+}
