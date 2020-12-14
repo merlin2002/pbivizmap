@@ -5,10 +5,10 @@
         {
             "resourceId": "rId0",
             "sourceType": 5,
-            "file": "resources/polar91275C762EF847969B236C51745DEF81.pbiviz.json"
+            "file": "resources/map91275C762EF847969B236C51745DEF81.pbiviz.json"
         }
     ],
-    "visual": {"name":"polar","displayName":"polar","guid":"polar91275C762EF847969B236C51745DEF81","visualClassName":"Visual","version":"1.0.0","description":"极坐标系下的堆叠柱状图","supportUrl":"https://community.powerbi.com","gitHubUrl":""},
+    "visual": {"name":"map","displayName":"map","guid":"map91275C762EF847969B236C51745DEF81","visualClassName":"Visual","version":"1.0.0","description":"极坐标系下的堆叠柱状图","supportUrl":"https://community.powerbi.com","gitHubUrl":""},
     "metadata": {
         "pbivizjson": {
             "resourceId": "rId0"

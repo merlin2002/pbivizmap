@@ -13,5 +13,7 @@ export declare class myPropertiesSettings {
     showtoolbox: boolean;
     showlegend: boolean;
     renderer: string;
+    showlable: boolean;
+    lableposition: string;
     getthemecolor(themename: string): string;
 }

@@ -5,8 +5,8 @@ import VisualConstructorOptions = powerbiVisualsApi.extensibility.visual.VisualC
 var powerbiKey: any = "powerbi";
 var powerbi: any = window[powerbiKey];
 
-var map91275C762EF847969B236C51745DEF81_DEBUG: IVisualPlugin = {
-    name: 'map91275C762EF847969B236C51745DEF81_DEBUG',
+var map91275C762EF847969B236C51745DEF81: IVisualPlugin = {
+    name: 'map91275C762EF847969B236C51745DEF81',
     displayName: 'map',
     class: 'Visual',
     apiVersion: '2.6.0',
@@ -23,7 +23,7 @@ var map91275C762EF847969B236C51745DEF81_DEBUG: IVisualPlugin = {
 if (typeof powerbi !== "undefined") {
     powerbi.visuals = powerbi.visuals || {};
     powerbi.visuals.plugins = powerbi.visuals.plugins || {};
-    powerbi.visuals.plugins["map91275C762EF847969B236C51745DEF81_DEBUG"] = map91275C762EF847969B236C51745DEF81_DEBUG;
+    powerbi.visuals.plugins["map91275C762EF847969B236C51745DEF81"] = map91275C762EF847969B236C51745DEF81;
 }
 
-export default map91275C762EF847969B236C51745DEF81_DEBUG;
+export default map91275C762EF847969B236C51745DEF81;

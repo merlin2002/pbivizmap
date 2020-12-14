@@ -68,7 +68,7 @@ export class Visual implements IVisual {
     private textNode: Text;
     private datachina: any;
     private datacity: any;
-    // private maplevel: any;
+    private maxLocal:any;
 
     private host: IVisualHost; // <== NEW PROPERTY
     private selectionManager: ISelectionManager; // <== NEW PROPERTY
@@ -151,14 +151,14 @@ export class Visual implements IVisual {
 
         let values: DataViewValueColumns = categoricalDataView.values;
 
+        this.maxLocal=values[0].maxLocal;
 
         values[measureFieldIndex].values.map((years: PrimitiveValue, index) => {
             if (categoricalDataView.categories[categoricalDataView.categories.length - 1].values[index]) {
                 data.push(
                     {
                         name: categoricalDataView.categories[categoricalDataView.categories.length - 1].values[index],
-                        value: years,
-                        key: 500000
+                        value: years
                     }
                 )
             }
@@ -198,7 +198,7 @@ export class Visual implements IVisual {
             }
             else {
                 $.getJSON(`https://restapi.amap.com/v3/config/district?keywords=${cityname}&subdistrict=2&key=27225883d84490ce704f2a452f38daa3`, function (geoJson) {
-                    if (data.length == 1) {
+                    if ((data.length == 1) && (data[0].name==cityname)) {
                         resolve(`https://geo.datav.aliyun.com/areas/bound/geojson?code=${geoJson.districts[0].adcode}`);
                     }
                     else {
@@ -212,7 +212,7 @@ export class Visual implements IVisual {
         p.then((res: any) => {
 
             myChart.showLoading();
-
+            let maxLocal=this.maxLocal;
             $.getJSON(res, function (geoJson) {
                 myChart.hideLoading();
                 echarts.registerMap('地图', geoJson);
@@ -240,7 +240,7 @@ export class Visual implements IVisual {
                     },
                     visualMap: {
                         min: 0,
-                        max: 1500,
+                        max: maxLocal,
                         text: ['High', 'Low'],
                         realtime: false,
                         calculable: true,
