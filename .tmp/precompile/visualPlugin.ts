@@ -7,7 +7,7 @@ var powerbi: any = window[powerbiKey];
 
 var map91275C762EF847969B236C51745DEF81: IVisualPlugin = {
     name: 'map91275C762EF847969B236C51745DEF81',
-    displayName: 'map',
+    displayName: '形状着色地图',
     class: 'Visual',
     apiVersion: '2.6.0',
     create: (options: VisualConstructorOptions) => {

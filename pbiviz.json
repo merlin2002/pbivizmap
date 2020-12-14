@@ -1,11 +1,11 @@
 {
     "visual": {
         "name": "map",
-        "displayName": "map",
+        "displayName": "形状着色地图",
         "guid": "map91275C762EF847969B236C51745DEF81",
         "visualClassName": "Visual",
         "version": "1.0.0",
-        "description": "极坐标系下的堆叠柱状图",
+        "description": "形状着色地图",
         "supportUrl": "https://community.powerbi.com",
         "gitHubUrl": ""
     },
